@@ -1,0 +1,36 @@
+/* Дизайн-токены (значения взяты из макета Figma без изменений) */
+:root {
+  /* цвета */
+  --c-ink: #000;
+  --c-white: #fff;
+  --c-green: #0d483b;
+  --c-mint: #e1eae8;
+  --c-soft: #f6f8f7;
+  --c-brand: #008e1c;
+  --c-cyan: #1eb9cb;
+  --c-orange: #ff871c;
+  --c-violet: #b18ff8;
+  --c-red: #ee362a;
+  --c-lime: #7ec730;
+  --c-gray: #727874;
+  --c-muted: rgba(0, 14, 51, 0.3);
+  --c-hero: #2c4857;
+
+  /* шрифты */
+  --font-base: "PT Root UI", "PT Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-date: "Inter", var(--font-base);
+
+  /* сетка: 1920 = 120 + 1680 + 120 */
+  --container: 1680px;
+  --gutter: clamp(16px, 6.25vw, 120px);
+  --gutter-header: clamp(8px, 5vw, 96px);
+
+  /* типографика */
+  --fs-h2: clamp(36px, 3.75vw, 72px);
+  --lh-h2: 1.139;
+
+  /* радиусы */
+  --r-btn: 16px;
+  --r-tag: 4px;
+  --r-pill: 999px;
+}

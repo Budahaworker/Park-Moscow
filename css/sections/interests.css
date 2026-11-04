@@ -1,0 +1,32 @@
+.interests { padding: clamp(56px, 5.2vw, 100px) 0 20px; background: var(--c-mint); }
+.interests__head { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 32px; }
+.interests__head .arrows { padding-bottom: 6px; }
+
+.interests__track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.interests__track::-webkit-scrollbar { display: none; }
+
+.love-card {
+  --tone: var(--c-cyan); --tag-opacity: 0.6; --decor: none;
+  position: relative; flex: 0 0 calc((100% - 72px) / 4); min-width: 280px; height: 580px;
+  overflow: hidden; background: var(--c-mint); scroll-snap-align: start;
+}
+.love-card::before { content: ""; position: absolute; inset: 0; background: var(--decor) 0 0 / 100% 100% no-repeat; }
+.love-card__link { position: relative; display: flex; flex-direction: column; justify-content: center; height: 100%; padding: 240px 80px 0 0; }
+.love-card__panel { display: flex; flex-direction: column; gap: 24px; min-height: 164px; padding: 20px; background: var(--tone); color: var(--c-white); }
+.love-card__tag { display: block; font-weight: 500; font-size: 12px; line-height: 14px; text-transform: uppercase; opacity: var(--tag-opacity); }
+.love-card__title { display: block; margin-top: 24px; font-weight: 500; font-size: 24px; line-height: 28px; }
+.love-card__panel--tall { flex: 1; justify-content: space-between; margin-top: 0; }
+.love-card__panel--tall .love-card__title { margin-top: 24px; }
+.love-card__date { font-weight: 400; font-size: 16px; line-height: 20px; opacity: 0.6; }
+
+.love-card--kids   { --tone: var(--c-cyan);   --decor: url("../../assets/decor/love-kids.svg"); }
+.love-card--sport  { --tone: var(--c-green);  --decor: url("../../assets/decor/love-sport.svg"); }
+.love-card--rest   { --tone: var(--c-orange); --decor: url("../../assets/decor/love-rest.svg");  --tag-opacity: 0.4; }
+.love-card--sights { --tone: var(--c-violet); --decor: url("../../assets/decor/love-sights.svg"); --tag-opacity: 0.5; }
+.love-card--podcast .love-card__link, .love-card--gallery .love-card__link { justify-content: flex-start; }
+.love-card--podcast { --tone: var(--c-red); }
+.love-card--gallery { --tone: var(--c-lime); }
+.love-card--podcast::before, .love-card--gallery::before { background: var(--tone); opacity: 0.15; }
+
+@media (max-width: 1200px) { .love-card { flex-basis: calc((100% - 24px) / 2); } }
+@media (max-width: 640px)  { .love-card { flex-basis: 85%; } }

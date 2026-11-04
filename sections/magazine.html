@@ -1,0 +1,67 @@
+<section class="magazine" aria-labelledby="magazine-title">
+  <div class="container">
+    <div class="section-head section-head--end">
+      <h2 class="h2" id="magazine-title">Новый выпуск журнала</h2>
+      <p class="section-head__lead section-head__lead--dark">Истории парков, маршруты, интервью с горожанами<br>и новые городские привычки — в каждом выпуске</p>
+    </div>
+
+    <div class="magazine__body" data-slider>
+      <!-- Обложка выпуска -->
+      <a class="cover" href="#/media" aria-label="Журнал «Парки Москвы», осень 2026">
+        <span class="cover__bg" aria-hidden="true"></span>
+        <span class="cover__pattern" aria-hidden="true"></span>
+        <img class="cover__photo" src="assets/img/magazine/cover-photo.webp" alt="" width="488" height="605" loading="lazy">
+        <span class="tag cover__tag">Осень 2026</span>
+        <span class="cover__label">Журнал</span>
+        <img class="cover__logo" src="assets/logos/magazine.svg" alt="Парки Москвы" width="173" height="48">
+      </a>
+
+      <!-- Статьи выпуска -->
+      <div class="magazine__side">
+        <ul class="magazine__cards" role="list" data-slider-track>
+      <li>
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/img/magazine/article-herbarium.webp" alt="" width="804" height="460" loading="lazy">
+          </div>
+          <p class="card__meta"><span>Статьи</span><img class="card__sep" src="assets/icons/dot-diamond.svg" alt="" width="8" height="8"><span>5 парков</span></p>
+          <h3 class="card__title"><a class="card__link" href="#/media">Осенний гербарий своими руками</a></h3>
+          <p class="card__text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+          <time class="card__date" datetime="2026-10-10">10 октября 2026</time>
+          <ul class="card__tags">
+            <li><a class="tag" href="#/media">Спорт</a></li>
+          </ul>
+        </article>
+      </li>
+      <li>
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/img/magazine/article-routes.webp" alt="" width="804" height="460" loading="lazy">
+          </div>
+          <p class="card__meta"><span>Статьи</span><img class="card__sep" src="assets/icons/dot-diamond.svg" alt="" width="8" height="8"><span>Коробковский сад</span></p>
+          <h3 class="card__title"><a class="card__link" href="#/media">Золотая осень: 5 маршрутов по паркам Москвы</a></h3>
+          <p class="card__text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+          <time class="card__date" datetime="2026-10-10">10 октября 2026</time>
+          <ul class="card__tags">
+            <li><a class="tag" href="#/media">Фестивали</a></li>
+            <li><a class="tag" href="#/media">Концерты</a></li>
+            <li><a class="tag" href="#/media">Детям</a></li>
+          </ul>
+        </article>
+      </li>
+        </ul>
+
+        <div class="magazine__controls">
+          <div class="arrows">
+            <button class="arrows__btn arrows__btn--prev" type="button" data-slider-prev aria-label="Назад"></button>
+            <button class="arrows__btn arrows__btn--next" type="button" data-slider-next aria-label="Вперёд"></button>
+          </div>
+          <a class="btn btn--white" href="#/media">
+            Все статьи
+            <img src="assets/icons/arrow-right.svg" alt="" width="24" height="24">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

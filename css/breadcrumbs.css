@@ -1,0 +1,6 @@
+.site-breadcrumbs[hidden] { display: none; }
+.breadcrumbs { max-width: calc(var(--container) + 2 * var(--gutter)); margin-inline: auto; padding: 16px var(--gutter) 0; }
+.breadcrumbs__list { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font-weight: 500; font-size: 14px; line-height: 18px; color: var(--c-gray); }
+.breadcrumbs__item + .breadcrumbs__item::before { content: "/"; margin-right: 8px; opacity: 0.6; }
+.breadcrumbs__link:hover { color: var(--c-green); text-decoration: underline; }
+.breadcrumbs__item[aria-current="page"] { color: var(--c-ink); }

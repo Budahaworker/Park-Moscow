@@ -1,0 +1,35 @@
+<section class="hero" data-hero aria-roledescription="карусель" aria-label="Главное на сайте">
+  <div class="hero__frame">
+
+    <!-- Место под видео/фото. <video class="hero__video"> или <img class="hero__video"> -->
+    <div class="hero__media" aria-hidden="true"></div>
+
+    <!-- Скругление «выступ» в левом верхнем углу -->
+    <svg class="hero__notch" viewBox="0 0 370 153" width="370" height="153" aria-hidden="true" focusable="false">
+      <path d="M0 0H370C330 0 270 30 270 70Q270 93 246 93H60A60 60 0 0 0 0 153Z" fill="currentColor"/>
+    </svg>
+
+    <div class="hero__content">
+      <div class="hero__slides">
+        <article class="hero__slide is-active" data-hero-slide>
+          <h1 class="hero__title">Новая<br>городская привычка</h1>
+          <p class="hero__lead">Вместе создаем пространства для жизни,<br>вдохновения и общения</p>
+          <a class="btn btn--glass" href="#/afisha">Открыть осеннюю афишу</a>
+        </article>
+
+        <article class="hero__slide" data-hero-slide hidden>
+          <h2 class="hero__title">Золотая осень<br>в парках Москвы</h2>
+          <p class="hero__lead">Выходные, мастер-классы и концерты<br>на свежем воздухе</p>
+          <a class="btn btn--glass" href="#/afisha">Смотреть афишу</a>
+        </article>
+      </div>
+
+      <div class="hero__timeline">
+        <div class="hero__progress" aria-hidden="true"><span class="hero__progress-bar" data-hero-bar></span></div>
+        <p class="hero__counter" aria-live="polite"><span data-hero-current>01</span><span class="hero__counter-total"> — 02</span></p>
+        <button class="hero__arrow hero__arrow--prev" type="button" data-hero-prev aria-label="Предыдущий слайд"></button>
+        <button class="hero__arrow hero__arrow--next" type="button" data-hero-next aria-label="Следующий слайд"></button>
+      </div>
+    </div>
+  </div>
+</section>

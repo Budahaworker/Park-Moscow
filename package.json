@@ -1,0 +1,9 @@
+{
+  "name": "parki-moskvy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Главная страница «Парки Москвы» (HTML/CSS/JS, Select2)",
+  "scripts": {
+    "start": "npx http-server . -p 8080 -c-1"
+  }
+}

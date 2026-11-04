@@ -1,0 +1,8 @@
+.partners { padding: 0 0 80px; background: var(--c-soft); }
+.partners .container { display: flex; flex-direction: column; gap: 32px; padding-top: 40px; }
+.partners__track { display: flex; gap: 24px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.partners__track::-webkit-scrollbar { display: none; }
+.partner { display: grid; place-items: center; flex: none; width: 260px; height: 144px; overflow: hidden; background: rgba(255, 255, 255, 0.2); scroll-snap-align: start; }
+.partner img { max-width: 100%; height: auto; }
+.partner img[width="260"] { width: 260px; height: 144px; object-fit: contain; }
+.partners__controls { display: flex; align-items: center; justify-content: space-between; gap: 16px; }

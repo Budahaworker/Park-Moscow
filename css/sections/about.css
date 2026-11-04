@@ -1,0 +1,40 @@
+.about { padding-top: clamp(56px, 6.25vw, 120px); background: var(--c-soft); }
+.about__grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+
+.about__text { display: flex; flex-direction: column; justify-content: center; gap: 48px; padding: 120px 92px 120px 0; }
+.about__lead { max-width: 736px; font-size: 24px; line-height: 28px; }
+.about__actions { display: flex; flex-wrap: wrap; gap: 16px; }
+.about__text .h2 { margin-bottom: -16px; }
+
+/* зелёная плашка «Мы всегда рядом» */
+.social { position: relative; display: flex; flex-direction: column; justify-content: space-between; gap: 48px; min-height: 626px; padding: 120px 60px; color: var(--c-white); }
+.social::before { content: ""; position: absolute; inset: 0; background: url("../../assets/decor/social-bg.svg") 0 0 / 100% 100% no-repeat; }
+.social > * { position: relative; }
+.social__title { font-weight: 500; font-size: var(--fs-h2); line-height: var(--lh-h2); }
+.social__list { display: flex; flex-wrap: wrap; gap: 12px; max-width: 570px; }
+.social__link {
+  display: flex; align-items: center; gap: 0; padding-right: 20px; height: 48px; border-radius: 24px;
+  background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(24px);
+  font-weight: 500; font-size: 16px; line-height: 22px;
+  transition: background-color 0.2s;
+}
+.social__link:hover { background: rgba(255, 255, 255, 0.2); }
+
+/* подписка: наезжает на плашку на 60px */
+.subscribe-wrap { position: relative; display: flex; justify-content: center; margin-top: -60px; padding-bottom: 66px; }
+.subscribe { position: relative; width: 100%; max-width: 828px; padding: 120px 80px; background: var(--c-white); display: flex; flex-direction: column; gap: 12px; }
+.subscribe__title { font-weight: 500; font-size: clamp(32px, 2.5vw, 48px); line-height: 1.125; color: var(--c-green); }
+.subscribe__lead { font-size: 20px; line-height: 24px; color: var(--c-green); }
+.subscribe__form { display: flex; flex-wrap: wrap; gap: 12px 24px; margin-top: 28px; }
+.subscribe__input { flex: 1 1 240px; min-width: 0; height: 56px; padding: 17px 0; border: 0; border-bottom: 1px solid var(--c-green); border-radius: 0; background: transparent; font-weight: 500; font-size: 16px; line-height: 22px; outline-offset: 4px; }
+.subscribe__input::placeholder { color: var(--c-muted); }
+.subscribe__status { flex-basis: 100%; min-height: 20px; font-size: 14px; line-height: 20px; color: var(--c-green); }
+.subscribe__status.is-error { color: var(--c-red); }
+.subscribe__icon { position: absolute; left: 50%; bottom: -65px; transform: translateX(-50%); }
+
+@media (max-width: 1100px) {
+  .about__grid { grid-template-columns: 1fr; }
+  .about__text { padding: 40px 0; }
+  .social { padding: 60px 24px; min-height: 0; }
+  .subscribe { padding: 60px 24px; }
+}

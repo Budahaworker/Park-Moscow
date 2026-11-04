@@ -1,0 +1,66 @@
+<div class="header__inner">
+
+  <!-- Топбар: радио, подкасты, поиск, версия для слабовидящих -->
+  <div class="topbar">
+    <ul class="topbar__media">
+      <li>
+        <a class="topbar__media-link" href="#/radio">
+          <img src="assets/icons/play.svg" alt="" width="40" height="40">
+          <span>Радио Парки</span>
+        </a>
+      </li>
+      <li>
+        <a class="topbar__media-link" href="#/podcasts">
+          <img src="assets/icons/play.svg" alt="" width="40" height="40">
+          <span>Подкасты</span>
+        </a>
+      </li>
+    </ul>
+
+    <ul class="topbar__tools">
+      <li>
+        <a class="topbar__btn" href="#/search">
+          <img src="assets/icons/search.svg" alt="" width="24" height="24">
+          <span>Поиск по сайту</span>
+        </a>
+      </li>
+      <li>
+        <button class="topbar__btn" type="button" data-vision-toggle aria-pressed="false">
+          <img src="assets/icons/eye.svg" alt="" width="24" height="24">
+          <span>Версия для слабовидящих</span>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <hr class="header__line">
+
+  <!-- Главное меню -->
+  <div class="mainbar">
+    <a class="logo" href="#/" aria-label="Парки Москвы — на главную">
+      <img src="assets/logos/parki-moskvy.svg" alt="Парки Москвы" width="147" height="36">
+    </a>
+
+    <button class="burger" type="button" aria-expanded="false" aria-controls="main-nav" data-burger>
+      <span class="visually-hidden">Меню</span>
+      <i class="burger__lines" aria-hidden="true"></i>
+    </button>
+
+    <nav class="main-nav" id="main-nav" aria-label="Основное меню">
+      <ul class="main-nav__list">
+        <li><a class="main-nav__link" href="#/about">Об организации</a></li>
+        <li><a class="main-nav__link" href="#/afisha">Афиша</a></li>
+        <li><a class="main-nav__link" href="#/media">Медиа</a></li>
+        <li><a class="main-nav__link" href="#/partners">Стать партнером</a></li>
+        <li><a class="main-nav__link" href="#/business">Открой бизнес</a></li>
+        <li>
+          <a class="main-nav__link main-nav__link--icon" href="#/parks">
+            К любимому парку
+            <img src="assets/icons/shield.svg" alt="" width="24" height="24">
+          </a>
+        </li>
+        <li><a class="main-nav__link" href="#/infrastructure">Инфраструктура</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>

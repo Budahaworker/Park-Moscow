@@ -1,0 +1,2 @@
+.news { padding-block: clamp(56px, 6.25vw, 120px); }
+.news .container { display: flex; flex-direction: column; gap: 32px; }

@@ -1,0 +1,30 @@
+.hero { padding-inline: var(--gutter); }
+.hero__frame { position: relative; display: flex; flex-direction: column; justify-content: flex-end; max-width: var(--container); min-height: 740px; margin-inline: auto; overflow: hidden; border-radius: 0 0 0 120px; }
+.hero__media { position: absolute; inset: 0; background: var(--c-hero); }
+.hero__media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.35)); }
+.hero__video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero__notch { position: absolute; left: 0; top: 0; color: var(--c-white); }
+
+.hero__content { position: relative; display: flex; flex-direction: column; gap: 60px; padding: 0 clamp(20px, 6.25vw, 120px) 40px; color: var(--c-white); }
+.hero__slide { display: flex; flex-direction: column; align-items: flex-start; gap: 32px; }
+.hero__slide[hidden] { display: none; }
+.hero__title { font-weight: 500; font-size: clamp(44px, 4.58vw, 88px); line-height: 0.932; }
+.hero__lead { margin-top: 0; font-weight: 500; font-size: clamp(18px, 1.25vw, 24px); line-height: 1.167; }
+.hero__slide .btn { margin-top: 28px; }
+
+.hero__timeline { display: flex; align-items: center; gap: 24px; min-height: 56px; }
+.hero__progress { position: relative; flex: 1; height: 1px; background: rgba(217, 217, 217, 0.2); }
+.hero__progress-bar { position: absolute; left: 0; top: 0; height: 1px; width: 50%; background: var(--c-white); transition: width 0.3s; }
+.hero__counter { padding-right: 12px; font-weight: 500; font-size: 16px; line-height: 22px; text-align: right; }
+.hero__counter-total { opacity: 0.6; }
+.hero__arrow { width: 56px; height: 56px; flex: none; border-radius: 100px; backdrop-filter: blur(24px); background: center / contain no-repeat; }
+.hero__arrow--prev { background-image: url("../../assets/icons/hero-prev.svg"); }
+.hero__arrow--next { background-image: url("../../assets/icons/hero-next.svg"); }
+.hero__arrow:hover { opacity: 0.8; }
+
+@media (max-width: 760px) {
+  .hero__frame { min-height: 560px; border-bottom-left-radius: 60px; }
+  .hero__notch { width: 220px; height: auto; }
+  .hero__content { gap: 32px; }
+  .hero__counter { display: none; }
+}

@@ -1,0 +1,62 @@
+<section class="park-picker" aria-labelledby="picker-title">
+  <div class="container park-picker__grid">
+
+    <form class="picker-filter" action="#" onsubmit="return false">
+      <h2 class="picker-filter__title" id="picker-title">Выберем<br>ваш Парк Москвы?</h2>
+
+      <div class="picker-filter__body">
+        <label class="visually-hidden" for="picker-park">Парк</label>
+        <select class="js-select2" id="picker-park" name="park" data-variant="line">
+          <option value="all" selected>ВСЕ ПАРКИ МОСКВЫ</option>
+          <option value="pokrovsky">ЗОНА ОТДЫХА «ПОКРОВСКИЙ БЕРЕГ»</option>
+          <option value="gorky">ПАРК ГОРЬКОГО</option>
+          <option value="tushino">ПАРК «СЕВЕРНОЕ ТУШИНО»</option>
+          <option value="lianozovo">ЛИАНОЗОВСКИЙ ПАРК</option>
+          <option value="luzhkov">ПАРК ИМ. ЮРИЯ ЛУЖКОВА</option>
+          <option value="korobkovsky">КОРОБКОВСКИЙ САД</option>
+        </select>
+
+        <fieldset class="chips-group">
+          <legend class="chips-group__legend">Округа</legend>
+          <div class="chips">
+            <button class="chip" type="button" aria-pressed="false">Центральный</button>
+            <button class="chip" type="button" aria-pressed="false">Северный</button>
+            <button class="chip" type="button" aria-pressed="false">Северо-Восточный</button>
+            <button class="chip" type="button" aria-pressed="false">Восточный</button>
+            <button class="chip" type="button" aria-pressed="false">Юго-Восточный</button>
+            <button class="chip" type="button" aria-pressed="false">Южный</button>
+            <button class="chip" type="button" aria-pressed="false">Юго-Западный</button>
+            <button class="chip" type="button" aria-pressed="false">Западный</button>
+            <button class="chip" type="button" aria-pressed="false">Северо-Западный</button>
+            <button class="chip" type="button" aria-pressed="false">Зеленоградский</button>
+            <button class="chip" type="button" aria-pressed="false">Троицкий</button>
+            <button class="chip" type="button" aria-pressed="false">Новомосковский</button>
+          </div>
+        </fieldset>
+
+        <fieldset class="chips-group">
+          <legend class="chips-group__legend">Интересы</legend>
+          <div class="chips">
+            <button class="chip" type="button" aria-pressed="false">Культура</button>
+            <button class="chip" type="button" aria-pressed="false">Семейный отдых</button>
+            <button class="chip" type="button" aria-pressed="false">Спорт и активный отдых</button>
+            <button class="chip" type="button" aria-pressed="false">Детский отдых</button>
+            <button class="chip" type="button" aria-pressed="false">Природно-исторический парк</button>
+          </div>
+        </fieldset>
+      </div>
+    </form>
+
+    <!-- Карта -->
+    <div class="park-map" data-map>
+      <div class="park-map__canvas">
+        <img class="park-map__img" src="assets/img/map/moscow-map.webp" alt="Карта парков Москвы" width="1088" height="768" loading="lazy">
+        <img class="park-map__pins" src="assets/img/map/pins.svg" alt="" width="527" height="277" loading="lazy">
+        <span class="park-map__cluster park-map__cluster--4" aria-label="4 парка">4</span>
+        <span class="park-map__cluster park-map__cluster--2" aria-label="2 парка">2</span>
+        <img class="park-map__zoom" src="assets/img/map/zoom.svg" alt="" width="56" height="128">
+        <img class="park-map__yandex" src="assets/img/map/yandex.svg" alt="Яндекс" width="80" height="40">
+      </div>
+    </div>
+  </div>
+</section>

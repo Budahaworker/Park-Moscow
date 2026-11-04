@@ -1,0 +1,31 @@
+/* Тема Select2 под дизайн. Два варианта: pill (белая «таблетка») и line (с нижней линией). */
+.select2-container { font-family: var(--font-base); }
+.select2-container--default .select2-selection--single.sel { display: flex; align-items: center; height: 56px; border: 0; outline: 0; }
+.select2-container--default .sel .select2-selection__rendered { padding: 0; font-weight: 500; line-height: 22px; color: var(--c-ink); }
+.select2-container--default .sel .select2-selection__arrow {
+  position: static; flex: none; width: 24px; height: 24px; margin-left: 12px;
+  background: url("../assets/icons/chevron-down.svg") center / 24px no-repeat;
+}
+.select2-container--default .sel .select2-selection__arrow b { display: none; }
+.select2-container--default.select2-container--open .sel .select2-selection__arrow { transform: rotate(180deg); }
+.select2-container--default.select2-container--focus .sel { outline: 2px solid var(--c-brand); outline-offset: 2px; }
+
+/* pill */
+.select2-container--default .sel--pill { padding: 16px 16px 16px 20px; border-radius: var(--r-btn); background: var(--c-white); }
+.select2-container--default .sel--pill .select2-selection__rendered { font-size: 18px; white-space: nowrap; }
+
+/* line */
+.select2-container--default .sel--line { justify-content: space-between; padding: 16px 0; border-radius: 0; border-bottom: 1px solid rgba(0, 0, 0, 0.2); background: transparent; }
+.select2-container--default .sel--line .select2-selection__rendered { font-size: 16px; text-transform: uppercase; }
+
+/* выпадающий список */
+.select2-dropdown.sel-drop {
+  min-width: 240px; margin-top: 4px; padding: 8px 0;
+  border: 0; border-radius: var(--r-btn); background: var(--c-white);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16); overflow: hidden;
+}
+.sel-drop .select2-results__option { padding: 12px 20px; font-weight: 500; font-size: 16px; line-height: 22px; }
+.select2-container--default .sel-drop .select2-results__option--highlighted[aria-selected],
+.select2-container--default .sel-drop .select2-results__option--highlighted.select2-results__option--selectable { background: var(--c-mint); color: var(--c-green); }
+.select2-container--default .sel-drop .select2-results__option--selected,
+.select2-container--default .sel-drop .select2-results__option[aria-selected="true"] { background: transparent; color: var(--c-green); }

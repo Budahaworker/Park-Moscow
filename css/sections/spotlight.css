@@ -1,0 +1,24 @@
+.spotlight { padding-top: clamp(60px, 6.25vw, 120px); background: linear-gradient(180deg, rgba(225, 234, 232, 0.01) 0%, var(--c-mint) 100%); }
+.spotlight .section-head { margin-bottom: 60px; }
+.spotlight .h2 { min-width: 0; }
+
+/* лента карточек: уходит за правый край экрана */
+.spotlight__rail { display: flex; align-items: flex-start; height: 778px; padding-left: var(--gutter); overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; scroll-padding-left: var(--gutter); }
+.spotlight__rail::-webkit-scrollbar { display: none; }
+.spot { position: relative; flex: none; margin-left: -48px; scroll-snap-align: start; }
+.spot:first-child { margin-left: 0; }
+.spot__link { display: block; width: 100%; height: 100%; }
+.spot__img { max-width: none; }
+
+.spot--wide-offset { width: 544px; height: 680px; }
+.spot--wide-offset .spot__img { position: absolute; left: -44.67px; top: -34.25px; width: 633.34px; height: 749.09px; }
+.spot--full { width: 673.49px; height: 778.24px; }
+.spot--full .spot__img { width: 100%; height: 100%; }
+.spot--peek { width: 182.51px; height: 778.24px; }
+.spot--peek .spot__img { width: 100%; height: 100%; }
+.spot:last-child { margin-right: var(--gutter); }
+
+@media (max-width: 900px) {
+  .spotlight__rail { height: 520px; zoom: 0.65; }
+  .spotlight .section-head { margin-bottom: 24px; }
+}

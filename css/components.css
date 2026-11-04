@@ -1,0 +1,72 @@
+/* ---------- Кнопки ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  min-height: 56px; padding: 16px 22px 16px 24px;
+  border-radius: var(--r-btn);
+  font-weight: 500; font-size: 18px; line-height: 22px; white-space: nowrap;
+  transition: background-color 0.2s, opacity 0.2s;
+}
+.btn img { flex: none; }
+.btn--white { background: var(--c-white); color: var(--c-ink); }
+.btn--white:hover { background: var(--c-mint); }
+.btn--text { padding-inline: 24px 22px; color: var(--c-ink); }
+.btn--text:hover { background: rgba(13, 72, 59, 0.08); }
+.btn--primary { padding-inline: 48px; background: var(--c-green); color: var(--c-white); }
+.btn--primary:hover { opacity: 0.9; }
+.btn--ghost { padding-inline: 48px; color: var(--c-ink); }
+.btn--ghost:hover { background: rgba(13, 72, 59, 0.08); }
+.btn--glass { padding-inline: 24px; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(24px); color: var(--c-white); }
+.btn--glass:hover { background: rgba(255, 255, 255, 0.2); }
+
+/* ---------- Пара стрелок (спрайт 128×56: кнопки на x=0 и x=-72) ---------- */
+.arrows { display: flex; gap: 16px; }
+.arrows__btn {
+  width: 56px; height: 56px; flex: none;
+  background: url("../assets/icons/arrows-white.svg") 0 0 / 128px auto no-repeat;
+}
+.arrows__btn--next { background-position: -72px 0; }
+.arrows--62 .arrows__btn { background-image: url("../assets/icons/arrows-white-62.svg"); }
+.arrows--gray .arrows__btn { background-image: url("../assets/icons/arrows-gray.svg"); }
+.arrows__btn:disabled { opacity: 0.4; }
+
+/* ---------- Теги ---------- */
+.tag {
+  display: inline-flex; align-items: center;
+  padding: 4px 8px; border-radius: var(--r-tag);
+  background: var(--c-mint); color: var(--c-green);
+  font-weight: 500; font-size: 12px; line-height: 16px; text-transform: uppercase;
+}
+a.tag:hover, .tag--filter:hover { background: #cfdcd8; }
+.tag--filter[aria-pressed="true"] { background: var(--c-green); color: var(--c-white); }
+.tag--badge { position: absolute; left: 10px; bottom: 10px; }
+
+/* ---------- Чипы (скруглённые) ---------- */
+.chip {
+  padding: 12px 18px 14px;
+  border: 1px solid var(--c-mint); border-radius: var(--r-pill);
+  background: var(--c-white); color: var(--c-green);
+  font-weight: 500; font-size: 16px; line-height: 22px;
+  transition: background-color 0.2s, color 0.2s;
+}
+.chip:hover { background: var(--c-mint); }
+.chip[aria-pressed="true"] { background: var(--c-green); border-color: var(--c-green); color: var(--c-white); }
+
+/* ---------- Карточка события / новости / статьи ---------- */
+.cards-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px 24px; }
+.card { position: relative; display: flex; flex-direction: column; gap: 16px; height: 100%; }
+.card__media { position: relative; aspect-ratio: 402 / 230; overflow: hidden; }
+.card__media img { width: 100%; height: 100%; object-fit: cover; }
+.card__meta {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 500; font-size: 12px; line-height: 14px; text-transform: uppercase; color: var(--c-green);
+}
+.card__sep { flex: none; }
+.card__title { font-weight: 500; font-size: 24px; line-height: 28px; color: var(--c-green); }
+.card__link::after { content: ""; position: absolute; inset: 0; }          /* вся карточка кликабельна */
+.card__text { flex-grow: 1; font-weight: 400; font-size: 16px; line-height: 20px; }
+.card__date { font-family: var(--font-date); font-size: 16px; line-height: 1.3; color: var(--c-green); }
+.card__tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.card__tags .tag { position: relative; z-index: 1; }
+
+@media (max-width: 1200px) { .cards-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px)  { .cards-grid { grid-template-columns: 1fr; } .btn { white-space: normal; } }

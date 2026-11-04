@@ -1,0 +1,60 @@
+.site-footer { background: var(--c-white); }
+.footer__inner { display: flex; flex-direction: column; gap: 32px; max-width: calc(var(--container) + 2 * var(--gutter)); margin-inline: auto; padding: 100px var(--gutter) 32px; }
+
+/* логотипы организаторов */
+.footer__orgs { display: flex; align-items: center; justify-content: space-between; gap: 20px; overflow-x: auto; }
+.footer__org { display: flex; align-items: center; justify-content: center; width: 263.33px; height: 160px; }
+.footer__org img { max-width: 100%; max-height: 160px; object-fit: contain; }
+.footer__org .footer__org-img--kc { width: 128px; height: 92px; }
+
+/* тёмная плашка */
+.footer__panel {
+  position: relative; display: flex; flex-direction: column; gap: 80px; min-height: 580px;
+  padding: 80px 120px 100px 426px; overflow: hidden;
+  color: var(--c-white);   /* форму (с вырезом под логотип) рисует footer-bg.svg */
+}
+.footer__panel::before, .footer__panel::after { content: ""; position: absolute; inset: 0; pointer-events: none; background-repeat: no-repeat; background-size: 100% 100%; }
+.footer__panel::before { background-image: url("../assets/decor/footer-bg.svg"); }
+.footer__panel::after { background-image: url("../assets/decor/footer-pattern.svg"); }
+.footer__panel > * { position: relative; z-index: 1; }
+.footer__logo { position: absolute; left: 40px; top: 40px; width: 370px; height: 32px; }
+
+.footer__nav { display: flex; gap: 40px; max-width: 1134px; }
+.footer__nav-col { display: flex; flex-direction: column; flex: 1; gap: 36px; }
+.footer__nav-col a, .footer__contact dd { font-weight: 500; font-size: 20px; line-height: 24px; }
+.footer__nav-col a:hover, .footer__contact a:hover { text-decoration: underline; }
+
+.footer__contacts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px 24px; max-width: 1134px; }
+.footer__contact { display: flex; flex-direction: column; gap: 4px; }
+.footer__contact dt { font-weight: 500; font-size: 14px; line-height: 18px; text-transform: uppercase; opacity: 0.4; }
+.footer__contact--wide { grid-column: span 2; max-width: 362px; }
+
+/* нижняя строка */
+.footer__bar { display: flex; align-items: center; justify-content: center; gap: 40px; min-height: 48px; }
+.footer__copy, .footer__made { flex: 1; font-weight: 500; font-size: 14px; line-height: 18px; }
+.footer__made { text-align: right; color: var(--c-gray); }
+.footer__made a { color: var(--c-green); }
+.footer__made a:hover { text-decoration: underline; }
+.footer__socials { display: flex; gap: 24px; }
+.footer__social { display: block; width: 48px; height: 48px; background: url("../assets/icons/socials-footer.svg") 0 0 / 336px 48px no-repeat; }
+.footer__social--tg { background-position: -72px 0; }
+.footer__social--dzen { background-position: -144px 0; }
+.footer__social--vk { background-position: -216px 0; }
+.footer__social--hh { background-position: -288px 0; }
+.footer__social:hover { opacity: 0.8; }
+
+@media (max-width: 1280px) {
+  .footer__panel { padding: 120px 40px 60px; }
+}
+@media (max-width: 900px) {
+  .footer__inner { padding-top: 60px; }
+  .footer__panel { background: var(--c-green); border-radius: 0 0 0 80px; }
+  .footer__panel::before, .footer__panel::after { display: none; }
+  .footer__logo { display: none; }
+  .footer__nav { flex-direction: column; gap: 24px; }
+  .footer__nav-col { gap: 20px; }
+  .footer__contacts { grid-template-columns: 1fr; }
+  .footer__contact--wide { grid-column: auto; }
+  .footer__bar { flex-direction: column; gap: 16px; }
+  .footer__made { text-align: center; }
+}

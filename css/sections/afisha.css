@@ -1,0 +1,31 @@
+.afisha { padding: clamp(56px, 6.25vw, 120px) 0 80px; background: linear-gradient(180deg, var(--c-mint) 0%, rgba(225, 234, 232, 0) 100%); }
+.afisha .container { display: flex; flex-direction: column; gap: 32px; }
+.afisha .section-head { justify-content: flex-start; }
+.afisha .section-head .h2 { flex: 1; }
+.afisha__tools { display: flex; align-items: center; gap: 16px; }
+.afisha__tools .select2-container { min-width: 226px; }
+
+/* календарь */
+.calendar { display: flex; flex-direction: column; gap: 8px; }
+.calendar__month { font-weight: 500; font-size: 12px; line-height: 14px; text-transform: uppercase; color: var(--c-muted); }
+.calendar__row { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.calendar__days { display: flex; flex: 1; justify-content: space-between; gap: 8px; overflow-x: auto; scrollbar-width: none; }
+.calendar__days::-webkit-scrollbar { display: none; }
+.calendar__day {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+  width: 64px; height: 72px; padding: 16px; border-radius: var(--r-btn);
+  transition: background-color 0.2s;
+}
+.calendar__day:hover { background: rgba(255, 255, 255, 0.6); }
+.calendar__day[aria-pressed="true"] { background: var(--c-white); }
+.calendar__num { font-weight: 500; font-size: 20px; line-height: 24px; color: var(--c-green); }
+.calendar__dow { font-weight: 500; font-size: 12px; line-height: 14px; text-transform: uppercase; color: var(--c-muted); }
+.calendar__next { flex: none; width: 56px; height: 56px; background: url("../../assets/icons/calendar-next.svg") center / contain no-repeat; }
+.calendar__next:disabled { opacity: 0.3; }
+
+.filter-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.afisha__more { display: flex; justify-content: center; }
+
+@media (max-width: 760px) {
+  .afisha__tools { flex-wrap: wrap; }
+}

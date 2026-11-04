@@ -1,0 +1,207 @@
+<section class="afisha" aria-labelledby="afisha-title">
+  <div class="container">
+
+    <div class="section-head section-head--tools">
+      <h2 class="h2" id="afisha-title">Афиша</h2>
+
+      <div class="afisha__tools">
+        <label class="visually-hidden" for="afisha-park">Парк</label>
+        <select class="js-select2" id="afisha-park" name="park" data-variant="pill">
+          <option value="all" selected>Все парки Москвы</option>
+          <option value="pokrovsky">Зона отдыха «Покровский берег»</option>
+          <option value="gorky">Парк Горького</option>
+          <option value="tushino">Парк «Северное Тушино»</option>
+          <option value="lianozovo">Лианозовский парк</option>
+          <option value="luzhkov">Парк им. Юрия Лужкова</option>
+          <option value="korobkovsky">Коробковский сад</option>
+        </select>
+
+        <a class="btn btn--white" href="#/afisha">
+          Смотреть все
+          <img src="assets/icons/arrow-right.svg" alt="" width="24" height="24">
+        </a>
+      </div>
+    </div>
+
+    <!-- Календарь -->
+    <div class="calendar" data-slider>
+      <p class="calendar__month">Октябрь</p>
+      <div class="calendar__row">
+        <ul class="calendar__days" role="list" data-slider-track>
+          <li><button class="calendar__day" type="button" data-date="2026-10-11" aria-pressed="false"><span class="calendar__num">11</span><span class="calendar__dow">пн</span></button></li>
+          <li><button class="calendar__day" type="button" data-date="2026-10-12" aria-pressed="false"><span class="calendar__num">12</span><span class="calendar__dow">вт</span></button></li>
+          <li><button class="calendar__day" type="button" data-date="2026-10-13" aria-pressed="false"><span class="calendar__num">13</span><span class="calendar__dow">ср</span></button></li>
+          <li><button class="calendar__day" type="button" data-date="2026-10-14" aria-pressed="false"><span class="calendar__num">14</span><span class="calendar__dow">чт</span></button></li>
+          <li><button class="calendar__day" type="button" data-date="2026-10-15" aria-pressed="false"><span class="calendar__num">15</span><span class="calendar__dow">пт</span></button></li>
+          <li><button class="calendar__day" type="button" data-date="2026-10-16" aria-pressed="false"><span class="calendar__num">16</span><span class="calendar__dow">сб</span></button></li>
+          <li><button class="calendar__day" type="button" data-date="2026-10-17" aria-pressed="false"><span class="calendar__num">17</span><span class="calendar__dow">вс</span></button></li>
+          <li><button class="calendar__day" type="button" data-date="2026-10-18" aria-pressed="false"><span class="calendar__num">18</span><span class="calendar__dow">пн</span></button></li>
+          <li><button class="calendar__day" type="button" data-date="2026-10-19" aria-pressed="false"><span class="calendar__num">19</span><span class="calendar__dow">вт</span></button></li>
+          <li><button class="calendar__day" type="button" data-date="2026-10-20" aria-pressed="false"><span class="calendar__num">20</span><span class="calendar__dow">ср</span></button></li>
+          <li><button class="calendar__day" type="button" data-date="2026-10-21" aria-pressed="false"><span class="calendar__num">21</span><span class="calendar__dow">чт</span></button></li>
+          <li><button class="calendar__day" type="button" data-date="2026-10-22" aria-pressed="false"><span class="calendar__num">22</span><span class="calendar__dow">пт</span></button></li>
+          <li><button class="calendar__day" type="button" data-date="2026-10-23" aria-pressed="false"><span class="calendar__num">23</span><span class="calendar__dow">сб</span></button></li>
+          <li><button class="calendar__day" type="button" data-date="2026-10-24" aria-pressed="false"><span class="calendar__num">24</span><span class="calendar__dow">вс</span></button></li>
+        </ul>
+        <button class="calendar__next" type="button" data-slider-next aria-label="Следующие даты"></button>
+      </div>
+    </div>
+
+    <!-- Фильтр по категориям -->
+    <ul class="filter-tags" role="list" aria-label="Категории событий">
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Кинопоказы</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Ярмарка</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Спорт</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Мастер-классы</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Лекции</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Фестивали</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Концерты</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Шоу</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Театр</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Квизы</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Детям</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Анимация</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Благотворительная акция</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Выставки</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Экскурсии</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Диджей-сеты</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Вечеринки</button></li>
+      <li><button class="tag tag--filter" type="button" aria-pressed="false">Больше</button></li>
+    </ul>
+
+    <!-- Карточки событий -->
+    <ul class="cards-grid" role="list">
+      <li>
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/img/events/pokrovsky-gazebo.webp" alt="" width="804" height="460" loading="lazy">
+        <span class="tag tag--badge">Бесплатно</span>
+          </div>
+          <p class="card__meta">Зона отдыха «Покровский берег»</p>
+          <h3 class="card__title"><a class="card__link" href="#/afisha">Золотая осень: выходные<br>в парках Москвы</a></h3>
+          <p class="card__text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+          <time class="card__date" datetime="2026-10-12">12-13 октября, 12:00</time>
+          <ul class="card__tags">
+            <li><a class="tag" href="#/afisha">Экскурсии</a></li>
+            <li><a class="tag" href="#/afisha">Выставки</a></li>
+            <li><a class="tag" href="#/afisha">Мастер-классы</a></li>
+          </ul>
+        </article>
+      </li>
+      <li>
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/img/events/gorky-alleys.webp" alt="" width="804" height="460" loading="lazy">
+          </div>
+          <p class="card__meta">Парк Горького</p>
+          <h3 class="card__title"><a class="card__link" href="#/afisha">Экскурсия по осенним аллеям</a></h3>
+          <p class="card__text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+          <time class="card__date" datetime="2026-10-17T12:00">17 октября, 12:00</time>
+          <ul class="card__tags">
+            <li><a class="tag" href="#/afisha">Экскурсии</a></li>
+            <li><a class="tag" href="#/afisha">Выставки</a></li>
+            <li><a class="tag" href="#/afisha">Мастер-классы</a></li>
+          </ul>
+        </article>
+      </li>
+      <li>
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/img/events/autumn-yoga.webp" alt="" width="804" height="460" loading="lazy">
+          </div>
+          <p class="card__meta">5 парков</p>
+          <h3 class="card__title"><a class="card__link" href="#/afisha">Йога под осенним небом</a></h3>
+          <p class="card__text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+          <time class="card__date" datetime="2026-10-18T10:00">18 октября, 10:00</time>
+          <ul class="card__tags">
+            <li><a class="tag" href="#/afisha">Спорт</a></li>
+          </ul>
+        </article>
+      </li>
+      <li>
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/img/events/korobkovsky-festival.webp" alt="" width="804" height="460" loading="lazy">
+          </div>
+          <p class="card__meta">Коробковский сад</p>
+          <h3 class="card__title"><a class="card__link" href="#/afisha">Фестиваль «Осень в парках Москвы»</a></h3>
+          <p class="card__text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+          <time class="card__date" datetime="2026-09-19T12:00">19 сентября, 12:00</time>
+          <ul class="card__tags">
+            <li><a class="tag" href="#/afisha">Фестивали</a></li>
+            <li><a class="tag" href="#/afisha">Концерты</a></li>
+            <li><a class="tag" href="#/afisha">Детям</a></li>
+          </ul>
+        </article>
+      </li>
+      <li>
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/img/events/jazz-festival.webp" alt="" width="804" height="460" loading="lazy">
+        <span class="tag tag--badge">Бесплатно</span>
+          </div>
+          <p class="card__meta">Парк «Северное Тушино»</p>
+          <h3 class="card__title"><a class="card__link" href="#/afisha">Джаз в осеннем парке</a></h3>
+          <p class="card__text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+          <time class="card__date" datetime="2026-10-23T17:00">23 октября, 17:00</time>
+          <ul class="card__tags">
+            <li><a class="tag" href="#/afisha">Концерты</a></li>
+            <li><a class="tag" href="#/afisha">Вечеринки</a></li>
+          </ul>
+        </article>
+      </li>
+      <li>
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/img/events/herbarium.webp" alt="" width="804" height="460" loading="lazy">
+          </div>
+          <p class="card__meta">5 парков</p>
+          <h3 class="card__title"><a class="card__link" href="#/afisha">Мастерская осеннего гербария</a></h3>
+          <p class="card__text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+          <time class="card__date" datetime="2026-10-23T12:00">23 октября, 12:00</time>
+          <ul class="card__tags">
+            <li><a class="tag" href="#/afisha">Мастер-классы</a></li>
+          </ul>
+        </article>
+      </li>
+      <li>
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/img/events/lianozovo-quest.webp" alt="" width="804" height="460" loading="lazy">
+        <span class="tag tag--badge">Бесплатно</span>
+          </div>
+          <p class="card__meta">Лианозовский парк</p>
+          <h3 class="card__title"><a class="card__link" href="#/afisha">Семейный квест «Тайны осени»</a></h3>
+          <p class="card__text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+          <time class="card__date" datetime="2026-10-24T11:00">24 октября, 11:00</time>
+          <ul class="card__tags">
+            <li><a class="tag" href="#/afisha">Квест</a></li>
+            <li><a class="tag" href="#/afisha">Детям</a></li>
+          </ul>
+        </article>
+      </li>
+      <li>
+        <article class="card">
+          <div class="card__media">
+            <img src="assets/img/events/luzhkov-run.webp" alt="" width="804" height="460" loading="lazy">
+          </div>
+          <p class="card__meta">Парк им. Юрия Лужкова</p>
+          <h3 class="card__title"><a class="card__link" href="#/afisha">Осенний забег по парку</a></h3>
+          <p class="card__text">Здесь встречаются с друзьями, занимаются спортом, проводят время с семьёй и открывают новое. Мы помогаем найти парк, событие и занятие по душе.</p>
+          <time class="card__date" datetime="2026-10-24T12:00">24 октября, 12:00</time>
+          <ul class="card__tags">
+            <li><a class="tag" href="#/afisha">Спорт</a></li>
+            <li><a class="tag" href="#/afisha">Благотворительная акция</a></li>
+          </ul>
+        </article>
+      </li>
+    </ul>
+
+    <div class="afisha__more">
+      <button class="btn btn--text" type="button">
+        Показать ещё
+        <img src="assets/icons/chevron-down.svg" alt="" width="24" height="24">
+      </button>
+    </div>
+  </div>
+</section>

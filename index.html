@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Парки Москвы</title>
+  <meta name="description" content="Свежие новости, яркие события и идеи для прогулок. Узнавайте, чем живут парки Москвы, и планируйте свой отдых.">
+
+  <!-- Select2  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/css/select2.min.css">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/select2-theme.css">
+
+  <!-- Каркас: шапка / хлебные крошки / футер -->
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/breadcrumbs.css">
+  <link rel="stylesheet" href="css/footer.css">
+
+  <!-- Секции страниц (динамический контент) -->
+  <link rel="stylesheet" href="css/sections/hero.css">
+  <link rel="stylesheet" href="css/sections/spotlight.css">
+  <link rel="stylesheet" href="css/sections/interests.css">
+  <link rel="stylesheet" href="css/sections/afisha.css">
+  <link rel="stylesheet" href="css/sections/park-picker.css">
+  <link rel="stylesheet" href="css/sections/news.css">
+  <link rel="stylesheet" href="css/sections/magazine.css">
+  <link rel="stylesheet" href="css/sections/about.css">
+  <link rel="stylesheet" href="css/sections/partners.css">
+</head>
+<body>
+  <a class="skip-link" href="#page-content">Перейти к содержанию</a>
+
+  <!--
+    Четыре физически независимых зоны.
+    Хедер, хлебные крошки и футер лежат в своих partial-файлах и НЕ находятся
+    внутри #page-content — роутер перерисовывает только <main>.
+  -->
+  <header class="site-header" id="site-header" data-include-into="partials/header.html"></header>
+
+  <nav class="site-breadcrumbs" id="site-breadcrumbs" aria-label="Хлебные крошки" data-include-into="partials/breadcrumbs.html" hidden></nav>
+
+  <main class="page-content" id="page-content" tabindex="-1"></main>
+
+  <footer class="site-footer" id="site-footer" data-include-into="partials/footer.html"></footer>
+
+  <!-- jQuery нужен только для Select2 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-rc.0/js/select2.min.js"></script>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

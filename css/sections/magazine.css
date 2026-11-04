@@ -1,0 +1,25 @@
+.magazine { padding-top: clamp(56px, 5.2vw, 100px); background: linear-gradient(180deg, rgba(246, 248, 247, 0) 0%, var(--c-soft) 100%); }
+.magazine .container { display: flex; flex-direction: column; gap: 32px; }
+.magazine__body { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+
+/* обложка: слои позиционируются в долях исходного макета 828×656 */
+.cover { position: relative; display: block; aspect-ratio: 828 / 656; overflow: hidden; color: var(--c-white); }
+.cover__bg, .cover__pattern { position: absolute; inset: 0; background-repeat: no-repeat; background-size: 100% 100%; }
+.cover__bg { background-image: url("../../assets/decor/magazine-bg.svg"); }
+.cover__pattern { background-image: url("../../assets/decor/magazine-pattern.svg"); }
+.cover__photo { position: absolute; left: 41.1%; top: 7.8%; width: 58.9%; height: auto; max-width: none; }
+.cover__tag { position: absolute; left: 4.83%; top: 6.1%; }
+.cover__label { position: absolute; left: 4.83%; top: 18.3%; font-weight: 500; font-size: 12px; line-height: 14px; text-transform: uppercase; }
+.cover__logo { position: absolute; left: 4.83%; top: 23.2%; width: 20.9%; height: auto; }
+
+.magazine__side { display: flex; flex-direction: column; justify-content: space-between; gap: 24px; min-width: 0; }
+.magazine__cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.magazine__controls { display: flex; align-items: flex-start; justify-content: flex-end; gap: 24px; }
+
+@media (max-width: 1100px) {
+  .magazine__body { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .magazine__cards { grid-template-columns: 1fr; }
+  .magazine__controls { flex-wrap: wrap; }
+}
